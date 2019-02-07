@@ -11,8 +11,10 @@
  */
 describe('Protractor early steps',function() {
 	it('test case 1 - basic progam', function(){
-		//protractor code
 		
+		//protractor code
+		//by default the browser is chrome
+		browser.get("https://angularjs.org");
 	});
 	
 	it('test case 2 - close browser', function(){
