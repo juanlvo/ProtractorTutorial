@@ -6,6 +6,10 @@
  */
 exports.config = {
   seleniumAddress: 'http://localhost:4444/wd/hub',
-  specs: ['dummytest.js']
+  //specs: ['dummytest.js'],
+  specs: ['spec1.js'],
+  onPrepare : function(){
+    browser.manage().window().maximize();
+  }
   //specs: ['dummytest.js']
 };

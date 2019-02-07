@@ -16,10 +16,10 @@ describe('Protractor early steps',function() {
 		//by default the browser is chrome
 		browser.get("https://angularjs.org");
 
-		browser.get('http://juliemr.github.io/protractor-demo/');
-		browser.sleep(9000);
-
-		console.log("I am the last step to execute");
+		browser.get('http://juliemr.github.io/protractor-demo/').then(function() {
+			browser.sleep(9000);
+			console.log("I am the last step to execute");
+		});
 	});
 	
 	it('test case 2 - close browser', function(){
