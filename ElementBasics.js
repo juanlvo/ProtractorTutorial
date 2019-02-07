@@ -8,6 +8,9 @@
  * Section 6 Lecture 32
  * Usage of protractor locators - part 2
  * 
+ * Section 6 Lecture 33
+ * Jasmine assertions to validate protractor test
+ * 
  * @author: vivasoj
  */
 describe('Protractor element demo',function(){
@@ -27,7 +30,7 @@ describe('Protractor element demo',function(){
         browser.sleep(3000);
         element(by.id("gobutton")).click();
         element(by.css("h2[class='ng-binding']")).getText().then(function(text){
-            console.log(text);
+            expect(text).toBe("8");
         });
     });
 });
