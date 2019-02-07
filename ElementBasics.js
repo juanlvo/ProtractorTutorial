@@ -5,15 +5,29 @@
  * Section 6 Lecture 31
  * Usage of protractor locators
  * 
+ * Section 6 Lecture 32
+ * Usage of protractor locators - part 2
+ * 
  * @author: vivasoj
  */
 describe('Protractor element demo',function(){
-    it('test case 1', function(){
+/*     it('test case 1', function(){
         browser.get('http://juliemr.github.io/protractor-demo/');
         element(by.model("first")).sendKeys("3");
         element(by.model("second")).sendKeys("1");
         browser.sleep(3000);
         element(by.id("gobutton")).click();
         browser.sleep(5000);
+    }); */
+
+    it('test case 2', function(){
+        browser.get('http://juliemr.github.io/protractor-demo/');
+        element(by.model("first")).sendKeys("3");
+        element(by.model("second")).sendKeys("5");
+        browser.sleep(3000);
+        element(by.id("gobutton")).click();
+        element(by.css("h2[class='ng-binding']")).getText().then(function(text){
+            console.log(text);
+        });
     });
 });
