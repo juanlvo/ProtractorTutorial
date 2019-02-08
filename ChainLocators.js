@@ -13,7 +13,7 @@ describe('Importance of chain locators',function(){
         element(by.id("gobutton")).click();
 
         //repeater, chain locators and css identical tags
-        element(by.repeater("result in memory")).element(by.css("td:nth-child(2)")).getText().then(function(text){
+        element(by.repeater("result in memory")).element(by.css("td:nth-child(3)")).getText().then(function(text){
             console.log(text);
         });
     });

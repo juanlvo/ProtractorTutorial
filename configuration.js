@@ -12,7 +12,8 @@ exports.config = {
   //specs: ['dummytest.js'],
   //specs: ['spec1.js'],
   //specs: ['ElementBasics.js'],
-  specs: ['ChainLocators.js'],
+  //specs: ['ChainLocators.js'],
+  specs: ['All.js'],
 /*    capabilities: {
     'browserName': 'firefox'
   },  */
