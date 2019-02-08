@@ -2,22 +2,27 @@
  * Section 7 Lecture 41
  * getting the list of elements with all methods in protractor
  * 
+ * Section 7 Lecture 42
+ * refactoring and practicing exercises on all chain locators
+ * 
  * @author: vivasoju
  */
 describe('Section 7 Lecture 41', function(){
+    function Add(a, b) {
+        element(by.model("first")).sendKeys(a);
+        element(by.model("second")).sendKeys(b);
+        element(by.id("gobutton")).click();        
+    }
+
     it('test 1',function(){
         browser.get('http://juliemr.github.io/protractor-demo/');
-        element(by.model("first")).sendKeys("3");
-        element(by.model("second")).sendKeys("5");
-        element(by.id("gobutton")).click();
-
-        element(by.model("first")).sendKeys("3");
-        element(by.model("second")).sendKeys("7");
-        element(by.id("gobutton")).click();
-
-        element(by.model("first")).sendKeys("3");
-        element(by.model("second")).sendKeys("8");
-        element(by.id("gobutton")).click();
+        
+        Add(2, 3);
+        Add(4, 3);
+        Add(8, 3);
+        Add(2, 3);
+        Add(9, 3);
+        Add(0, 3);
 
 /*         element.all(by.repeater("result in memory")).count().then(function(number){
             console.log(number);
