@@ -14,7 +14,8 @@ exports.config = {
   //specs: ['ElementBasics.js'],
   //specs: ['ChainLocators.js'],
   //specs: ['All.js'],
-  specs: ['Dropdown.js'],
+  //specs: ['Dropdown.js'],
+  specs: ['Actions.js'],
 /*    capabilities: {
     'browserName': 'firefox'
   },  */
