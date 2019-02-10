@@ -1,5 +1,5 @@
 /***
- * Section 8 Lecture 44
+ * Section 7 Lecture 44
  * Handling dropdowns
  * 
  * @author: vivasoju
@@ -39,6 +39,10 @@ describe('Section 8 Lecture 44 - Handling dropdowns',function(){
             item.element(by.css("td:nth-child(3)")).getText().then(function(text){
                 console.log(text);
             });
+        });
+
+        element(by.model('operator')).element(by.css("option:nth-child(4)")).getText().then(function(text){
+            console.log("finding 4th element of the dropdown in a different way: "+text);
         });
     });
 });
