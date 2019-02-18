@@ -17,7 +17,8 @@ exports.config = {
   //specs: ['Dropdown.js'],
   //specs: ['Actions.js'],
   //specs: ['Alert.js'],
-  specs: ['Frames.js'],
+  //specs: ['Frames.js'],
+  specs: ['Sync.js'],
 /*    capabilities: {
     'browserName': 'firefox'
   },  */
