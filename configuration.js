@@ -18,7 +18,8 @@ exports.config = {
   //specs: ['Actions.js'],
   //specs: ['Alert.js'],
   //specs: ['Frames.js'],
-  specs: ['Sync.js'],
+  //specs: ['Sync.js'],
+  specs: ['jsobjectdemo.js'],
 /*    capabilities: {
     'browserName': 'firefox'
   },  */
