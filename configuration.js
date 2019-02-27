@@ -11,7 +11,7 @@ exports.config = {
   seleniumAddress: 'http://localhost:4444/wd/hub',
   //specs: ['dummytest.js'],
   //specs: ['spec1.js'],
-  //specs: ['ElementBasics.js'],
+  specs: ['ElementBasics.js'],
   //specs: ['ChainLocators.js'],
   //specs: ['All.js'],
   //specs: ['Dropdown.js'],
@@ -19,7 +19,7 @@ exports.config = {
   //specs: ['Alert.js'],
   //specs: ['Frames.js'],
   //specs: ['Sync.js'],
-  specs: ['jsobjectdemo.js'],
+  //specs: ['jsobjectdemo.js'],
 /*    capabilities: {
     'browserName': 'firefox'
   },  */

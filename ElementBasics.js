@@ -11,9 +11,15 @@
  * Section 6 Lecture 33
  * Jasmine assertions to validate protractor test
  * 
+ * Section 18 Lecture 105
+ * Page object mechanism for protractor test
+ * 
  * @author: vivasoj
  */
-describe('Protractor element demo',function(){
+//import { elementBasicsObject } from "./ElementBasicsObject";
+//declare const browser, describe, it: any;
+
+describe('Protractor element demo', function() {
 /*     it('test case 1', function(){
         browser.get('http://juliemr.github.io/protractor-demo/');
         element(by.model("first")).sendKeys("3");
@@ -22,14 +28,16 @@ describe('Protractor element demo',function(){
         element(by.id("gobutton")).click();
         browser.sleep(5000);
     }); */
-
+    
+    var elementBasicObject = require ("./ElementBasicsObject.js");
+    
     it('test case 2', function(){
         browser.get('http://juliemr.github.io/protractor-demo/');
-        element(by.model("first")).sendKeys("3");
-        element(by.model("second")).sendKeys("5");
+        elementBasicObject.firstInput.sendKeys("3");
+        elementBasicObject.secondInput.sendKeys("5");
         browser.sleep(3000);
-        element(by.id("gobutton")).click();
-        element(by.css("h2[class='ng-binding']")).getText().then(function(text){
+        elementBasicObject.gobutton.click();
+        elementBasicObject.result.getText().then(function(text){
             expect(text).toBe("8");
         });
     });
