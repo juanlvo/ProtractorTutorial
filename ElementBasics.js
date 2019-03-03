@@ -14,6 +14,9 @@
  * Section 18 Lecture 105
  * Page object mechanism for protractor test
  * 
+ * Section 18 Lecture 107
+ * Driving the page with setup and TearDown method
+ * 
  * @author: vivasoj
  */
 //import { elementBasicsObject } from "./ElementBasicsObject";
@@ -30,9 +33,13 @@ describe('Protractor element demo', function() {
     }); */
     
     var elementBasicObject = require ("./ElementBasicsObject.js");
+
+    beforeEach(function(){
+        elementBasicObject.getURL();
+    });
     
     it('test case 2', function(){
-        browser.get('http://juliemr.github.io/protractor-demo/');
+        //browser.get('http://juliemr.github.io/protractor-demo/');
         elementBasicObject.firstInput.sendKeys("3");
         elementBasicObject.secondInput.sendKeys("5");
         browser.sleep(3000);
@@ -40,5 +47,9 @@ describe('Protractor element demo', function() {
         elementBasicObject.result.getText().then(function(text){
             expect(text).toBe("8");
         });
+    });
+
+    afterEach(function() {
+        console.log('Test completed');
     });
 });
