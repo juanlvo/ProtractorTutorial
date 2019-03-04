@@ -5,6 +5,9 @@
  * Section 6 Lecture 35
  * Running protractor test on firefox and internet explorer (not working with the last driver :( )
  * 
+ * Section 19 Lecture 108
+ * onPrepare functionality in configuration file for preloading data
+ * 
  * @author: vivasoju
  */
 exports.config = {
