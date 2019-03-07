@@ -11,6 +11,9 @@
  * Section 21 Lecture 116
  * generating client reports for protractor test
  * 
+ * Section 21 Lecture 117
+ * tag configurqtion to control test script execution
+ * 
  * @author: vivasoju
  */
 var Jasmine2HtmlReporter = require('protractor-jasmine2-html-reporter');
