@@ -20,6 +20,9 @@
  * Section 20 Lecture 114
  * jasmine data provider format in defining the data
  * 
+ * Section 20 Lecture 115
+ * Eliminating data hardcoding in the scripts with jasmine dataprovider
+ * 
  * @author: vivasoj
  */
 //import { elementBasicsObject } from "./ElementBasicsObject";
@@ -35,21 +38,24 @@ describe('Protractor element demo', function() {
         browser.sleep(5000);
     }); */
     
+    var using= require ("jasmine-data-provider");
     var elementBasicObject = require ("./ElementBasicsObject.js");
-    var datadriven = require ("./data.js");
+    var data = require ("./data.js");
 
     beforeEach(function(){
         elementBasicObject.getURL();
     });
     
-    it('test case 2', function(){
-        //browser.get('http://juliemr.github.io/protractor-demo/');
-        elementBasicObject.firstInput.sendKeys(datadriven.firstinput);
-        elementBasicObject.secondInput.sendKeys(datadriven.secondinput);
-        browser.sleep(3000);
-        elementBasicObject.gobutton.click();
-        elementBasicObject.result.getText().then(function(text){
-            expect(text).toBe(datadriven.result);
+    using(data.Datadriven, function (data, description) {
+        it('test case 2', function(){
+            //browser.get('http://juliemr.github.io/protractor-demo/');
+            elementBasicObject.firstInput.sendKeys(data.firstinput);
+            elementBasicObject.secondInput.sendKeys(data.secondinput);
+            browser.sleep(3000);
+            elementBasicObject.gobutton.click();
+            elementBasicObject.result.getText().then(function(text){
+                expect(text).toBe(data.result);
+            });
         });
     });
 
