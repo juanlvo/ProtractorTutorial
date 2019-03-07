@@ -17,6 +17,9 @@
  * Section 18 Lecture 107
  * Driving the page with setup and TearDown method
  * 
+ * Section 20 Lecture 114
+ * jasmine data provider format in defining the data
+ * 
  * @author: vivasoj
  */
 //import { elementBasicsObject } from "./ElementBasicsObject";
@@ -33,6 +36,7 @@ describe('Protractor element demo', function() {
     }); */
     
     var elementBasicObject = require ("./ElementBasicsObject.js");
+    var datadriven = require ("./data.js");
 
     beforeEach(function(){
         elementBasicObject.getURL();
@@ -40,12 +44,12 @@ describe('Protractor element demo', function() {
     
     it('test case 2', function(){
         //browser.get('http://juliemr.github.io/protractor-demo/');
-        elementBasicObject.firstInput.sendKeys("3");
-        elementBasicObject.secondInput.sendKeys("5");
+        elementBasicObject.firstInput.sendKeys(datadriven.firstinput);
+        elementBasicObject.secondInput.sendKeys(datadriven.secondinput);
         browser.sleep(3000);
         elementBasicObject.gobutton.click();
         elementBasicObject.result.getText().then(function(text){
-            expect(text).toBe("8");
+            expect(text).toBe(datadriven.result);
         });
     });
 

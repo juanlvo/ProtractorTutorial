@@ -4,10 +4,25 @@
  * 
  * @author juanlvo
  */
-module.exports.datadriver = {
-    firstinput:"2",
-    secondinput:"3",
-    result:"5"
-}
+module.exports = {
+    Datadriven : {
+        FirstDataset : {
+            firstinput : "2",
+            secondinput : "3",
+            result : "5"
+        },
 
-console.log(datadriver.result);
+        SecondDataset : {
+            firstinput : "2",
+            secondinput : "3",
+            result : "5"
+        },
+
+        ThirdDataset : {
+            firstinput : "2",
+            secondinput : "3",
+            result : "5"
+        }
+
+    }
+}
