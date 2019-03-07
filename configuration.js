@@ -43,6 +43,12 @@ exports.config = {
         savePath: './test-reports'
       })
     );
+  },
+  suites: {
+    Smoke : ['Alert.js', 'Dropdown.js'],
+    Regression : 'ElementBasics.js'
+  },
+  jasmineNodeOpts: {
+    showColors: true,
   }
-  //specs: ['dummytest.js']
 };

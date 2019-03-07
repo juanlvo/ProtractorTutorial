@@ -23,6 +23,9 @@
  * Section 20 Lecture 115
  * Eliminating data hardcoding in the scripts with jasmine dataprovider
  * 
+ * Section 21 Lecture 117
+ * Tag configuration to control test scripts execution
+ * 
  * @author: vivasoj
  */
 //import { elementBasicsObject } from "./ElementBasicsObject";
