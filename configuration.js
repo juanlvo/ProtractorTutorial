@@ -8,8 +8,13 @@
  * Section 19 Lecture 108
  * onPrepare functionality in configuration file for preloading data
  * 
+ * Section 21 Lecture 116
+ * generating client reports for protractor test
+ * 
  * @author: vivasoju
  */
+var Jasmine2HtmlReporter = require('protractor-jasmine2-html-reporter');
+
 exports.config = {
   seleniumAddress: 'http://localhost:4444/wd/hub',
   //specs: ['dummytest.js'],
@@ -33,6 +38,11 @@ exports.config = {
     },  */
   onPrepare : function(){
     browser.manage().window().maximize();
+    jasmine.getEnv().addReporter(
+      new Jasmine2HtmlReporter({
+        savePath: './test-reports'
+      })
+    );
   }
   //specs: ['dummytest.js']
 };

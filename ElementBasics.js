@@ -47,7 +47,7 @@ describe('Protractor element demo', function() {
     });
     
     using(data.Datadriven, function (data, description) {
-        it('test case 2', function(){
+        it('test case 2 ' + description, function(){
             //browser.get('http://juliemr.github.io/protractor-demo/');
             elementBasicObject.firstInput.sendKeys(data.firstinput);
             elementBasicObject.secondInput.sendKeys(data.secondinput);
